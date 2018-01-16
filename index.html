@@ -1,41 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Rock Paper Scissors - By Hitalo Silva</title>
-	<link rel="stylesheet" type="text/css" href="index.css">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-	<div class="content">
-		<h1>Rock Paper Scissors</h1>
-		<h2>Let's play!</h2>
-		<div id="game">
-			<div>
-				<p id="message">
-					
-				</p>
-			</div>
-			<div id="round">
-				<div id="player">
-					<div id="buttons">
-						<button id="rock" class="button">Rock</button>
-				        <button id="paper" class="button">Paper</button>
-				        <button id="scissors" class="button">Scissor</button>
-					</div>
-					<div id="player_selection" class="selection">
-						
-					</div>
-				</div>
-				<div id="player_score">
-				</div>
-				<div id="computer_selection" class="selection">
-				</div>
-			</div>
-			<div id="gamer_buttons">
-				<button id="start">Start</button>
-				<button id="reset">Reset</button>
-			</div>
-		</div>
-	</div>
-	<script type="text/javascript" src="index.js"></script>
+  <div class="content">
+    <h1>Rock Paper Scissors</h1>
+    <h2>Let's play!</h2>
+    <div id="game">
+    <div>
+      <h4 id="message"></h4>
+    </div>
+    <div class="round">  
+      <div id="buttons" class="elements">
+        <button id="rock" class="button">Rock</button>
+        <button id="paper" class="button">Paper</button>
+        <button id="scissors" class="button">Scissor</button>
+      </div>
+      <div id="player_selection" class="elements selection">
+      </div>         
+      <div class="elements score">
+            <h1 id="score">0 x 0</h1>
+      </div>        
+    <div id="computer_selection" class="elements selection">
+    </div>
+    </div>
+    <div id="game-buttons">
+      <button id="start" class="btn-blue">Start</button>
+      <button id="reset" class="btn-blue">Reset</button>
+    </div>
+    </div>
+  </div>  
 </body>
 </html>
