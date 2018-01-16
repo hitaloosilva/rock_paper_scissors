@@ -1,0 +1,124 @@
+body {
+  background-color: #FFF;
+  margin: 0 auto;  
+}
+
+h1 {
+  color: #004E89;
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+}
+h2 {
+  color: #AAA;
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+.content {
+  text-align: center; 
+  min-width: 500px;
+}
+
+.icone {  
+  text-decoration: none; 
+  opacity: .55;
+  background-image: url("http://dlewis.net/nik-archives/wp-content/uploads/2011/10/Rock-Paper-Scissors.jpg");    
+  vertical-align: middle; 
+  background-repeat: no-repeat;  
+  background-position: -103px -10px;  
+  transform:  rotate(270deg);  
+}
+
+.icone_scissors {  
+  background-position: -103px -10px;  
+}
+
+.icone_paper {  
+  background-position: 20px -40px;  
+}
+
+.icone_rock {    
+  background-position: -230px -50px; 
+}
+
+.player_icone_side {
+  transform:  rotate(-270deg) scaleX(-1);
+} 
+
+.button { 
+  height: 36px;    
+  background-color: #f2f2f2;
+  border: 1px solid #f2f2f2;
+  border-radius: 2px;
+  color: #757575;  
+  font-family: arial,sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 5px auto;
+  width: 70px;
+  padding: 0 auto;
+}
+
+.button:hover {
+  border: 1px solid #c6c6c6;
+  color: #222;
+}
+.selection { 
+  width: 200px;
+  height: 200px;
+}
+
+.round {
+  display: block;  
+  position: relative;
+  text-align: center;
+  left: -40px;
+}
+
+.elements {
+  display: inline-block; 
+  vertical-align: top;
+  height: 150px;
+  width: 150px;
+}
+
+#game-buttons {
+  height: 100px;
+  margin-top: 40px;
+}
+
+#buttons {
+  width: 80px;
+}
+
+#score {
+  width: auto;
+  height: auto;
+  margin: auto;
+  padding: 40px 15px;
+}
+
+.selection {
+  border: 1px solid #c6c6c6;
+}
+
+.btn-blue {
+  border: 1px solid #4285f4;
+  font-weight: bold;  
+  background: #4285f4;
+  background: linear-gradient(top,#4387fd,#4683ea);
+  color: #fff; 
+  line-height: 28px;
+  padding: 0 12px;
+  border-radius: 2px;  
+}
+
