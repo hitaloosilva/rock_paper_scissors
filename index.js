@@ -2,12 +2,17 @@ let computerScore = 0;
 let humanScore = 0;
 const h4 = document.querySelector('#score');
 const h2 = document.querySelector('h4');
+const playerSelection = document.getElementById('player_selection');
+  const computerSelection = document.getElementById('computer_selection');
 
 function reset(){ 
  humanScore = 0;
  computerScore = 0;
  setScore(); 
  h2.textContent = "";
+ showButtons();
+ setIcon(playerSelection, '', false);
+ setIcon(computerSelection, '', false); 
 }
 
 function buttonReset(){
@@ -15,11 +20,12 @@ function buttonReset(){
 }
 
 function playRound(human, computer) {
-  const content = document.getElementById('#message');
-  if (computerScore == 5){
-    return;
-  }
-  else if (humanScore == 5){
+  const content = document.getElementById('message');  
+  setIcon(playerSelection, human, true);
+  setIcon(computerSelection, computer, false);
+
+  if (computerScore == 5 || humanScore == 5){
+    hideButtons();
     return;
   }
   else if (human === computer){
@@ -47,14 +53,27 @@ function playRound(human, computer) {
     setScore();
   }
   if (computerScore == 5){
-    setScore();
+    setScore();   
+    hideButtons();   
     content.textContent = 'Computer wins!';
 
   }
-  else if (humanScore == 5){    
+  else if (humanScore == 5){  
+    hideButtons(); 
     content.textContent = 'You win!';
 
   }
+}
+
+function setIcon(element, clazz, flip){
+  var finalClass = "elements selection";
+  if(clazz != ''){
+    finalClass += " icone icone_" + clazz;
+  }
+  if(flip == true){
+     finalClass += " player_icone_side";
+  }  
+  element.className = finalClass;
 }
 
 function computerChoice() {
@@ -66,8 +85,19 @@ function setScore(){
   h4.textContent = `${humanScore} X ${computerScore}`;
 }
 
+function hideButtons(){
+  const buttonsDiv = document.getElementById('buttons');
+  buttonsDiv.style.visibility = 'hidden'; 
+}
+
+function showButtons(){
+  const buttonsDiv = document.getElementById('buttons');
+  buttonsDiv.style.visibility = 'visible'; 
+}
+
 function game(){  
   document.getElementById('start').id = 'two';
+  showButtons();
   setScore();
   const buttons = document.querySelectorAll('.button');
   buttons.forEach((button) => {
@@ -77,9 +107,10 @@ function game(){
   });
 }
 
-function startGame(){  
+function startGame(){
   document.querySelector('#start').addEventListener('click', game);
 }
 
+hideButtons();
 buttonReset();
 startGame();
